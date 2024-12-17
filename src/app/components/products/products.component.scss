@@ -8,6 +8,18 @@ table {
     width: 100%;
     border-collapse: collapse;
 }
+.toggleStockbtn{
+    background-color: #28a745;
+    color: rgb(255, 255, 255);
+}
+.Deletebtn{
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.Updatebtn{
+    background-color: #0056b3;
+    color: rgb(255, 255, 255);
+}
 
 table,
 th,

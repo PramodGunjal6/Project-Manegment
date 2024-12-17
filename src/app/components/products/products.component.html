@@ -1,0 +1,40 @@
+<div class="product-list">
+    <div>
+        <label for="category">Filter by Category: </label>
+        <select id="category" [(ngModel)]="selectedCategory">
+            <option value="">All</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Books">Books</option>
+            <option value="Grocery">Grocery</option>
+            <option value="Beauty">Beauty</option>
+        </select>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>In Stock</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of filterProducts()">
+                <td>{{ product.name }}</td>
+                <td>{{ product.price | currency }}</td>
+                <td>{{ product.category }}</td>
+                <td>{{ product.inStock ? 'Yes' : 'No' }}</td>
+                <td>
+                    <button (click)="toggleStock(product.id)">
+                        Toggle Stock
+                    </button>
+                    <button (click)="deleteProduct(product.id)">Delete</button>
+                    <button (click)="updateProduct(product.id)">Update</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

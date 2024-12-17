@@ -5,7 +5,7 @@ import { Product } from '../../models/product.model';
 import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-add-product',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule,],
   templateUrl: './add-product.component.html',
   styleUrl: './add-product.component.scss',
 })

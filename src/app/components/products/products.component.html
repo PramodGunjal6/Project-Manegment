@@ -28,11 +28,11 @@
                 <td>{{ product.category }}</td>
                 <td>{{ product.inStock ? 'Yes' : 'No' }}</td>
                 <td>
-                    <button (click)="toggleStock(product.id)" class="toggleStockbtn">
+                    <button (click)="toggleStock(product.id)">
                         Toggle Stock
                     </button>
-                    <button (click)="deleteProduct(product.id)" class="Deletebtn">Delete</button>
-                    <button (click)="updateProduct(product.id)" class="Updatebtn">Update</button>
+                    <button (click)="deleteProduct(product.id)">Delete</button>
+                    <button (click)="updateProduct(product.id)">Update</button>
                 </td>
             </tr>
         </tbody>
